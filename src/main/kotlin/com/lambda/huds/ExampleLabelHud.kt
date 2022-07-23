@@ -3,18 +3,26 @@ package com.lambda.huds
 import com.lambda.ExamplePlugin
 import com.lambda.client.event.SafeClientEvent
 import com.lambda.client.plugin.api.PluginLabelHud
+import com.lambda.client.util.color.ColorHolder
+import com.lambda.util.FriendManager
 
 internal object ExampleLabelHud : PluginLabelHud(
-    name = "ExampleLabelHud",
+    name = "Gooon Squad",
     category = Category.MISC,
-    description = "Simple hud example",
+    description = "Olympus on top!",
     pluginMain = ExamplePlugin
 ) {
-    private val prefix by setting("Prefix", "Hello")
-    private val suffix by setting("Suffix", "World")
 
     override fun SafeClientEvent.updateText() {
-        displayText.add(prefix, primaryColor)
-        displayText.add(suffix, secondaryColor)
+        for(player in mc.world.playerEntities) {
+            if(FriendManager.isFriendly(player.name)) {
+                displayText.add(player.name, ColorHolder(0,255,0))
+            }
+            else{
+                displayText.add(player.name, ColorHolder(255,0,0))
+
+            }
+        }
+
     }
 }

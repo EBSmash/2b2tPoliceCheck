@@ -1,9 +1,9 @@
 {
-  "name": "ExamplePlugin",
+  "name": "Olympus Team Cape",
   "version": "1.0",
-  "description": "Example implementation of a plugin for Lambda.",
-  "url": "https://github.com/lambda-client/ExamplePlugin",
-  "authors": [ "me", "you" ],
+  "description": ".",
+  "url": "",
+  "authors": [ "EBSmc" ],
   "main_class": "com.lambda.ExamplePlugin",
   "min_api_version": "3.0",
   "mixins": [ "mixins.ExamplePlugin.json" ],
