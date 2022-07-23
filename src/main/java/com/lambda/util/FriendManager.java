@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class FriendManager {
     static ArrayList<String> usernames = new ArrayList<>();
 
+
     public static List<String> getRawPastebin(String pasteKey){
 
         try {
@@ -25,9 +26,9 @@ public class FriendManager {
 
     }
 
-
+    static List<String> names = getRawPastebin("8aJ7KgE8");
     public static boolean isFriendly(String username) {
-        for (String name : getRawPastebin("8aJ7KgE8")) {
+        for (String name : names) {
             if(name.equalsIgnoreCase(username)){
                 return true;
             }

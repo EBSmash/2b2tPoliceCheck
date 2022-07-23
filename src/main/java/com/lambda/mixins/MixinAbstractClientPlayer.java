@@ -11,9 +11,12 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import javax.annotation.Nullable;
+
+
 @Mixin(AbstractClientPlayer.class)
 public abstract class MixinAbstractClientPlayer {
-    @Shadow @Nullable protected abstract NetworkPlayerInfo getPlayerInfo();
+    @Shadow @Nullable
+    protected abstract NetworkPlayerInfo getPlayerInfo();
 
     @Inject(method = "getLocationCape", at = @At("HEAD"), cancellable = true)
     public void getLocationCape(CallbackInfoReturnable<ResourceLocation> cir){
