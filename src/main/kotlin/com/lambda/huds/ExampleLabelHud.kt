@@ -14,12 +14,11 @@ internal object ExampleLabelHud : PluginLabelHud(
 ) {
 
     override fun SafeClientEvent.updateText() {
+        displayText.add("Goon Squad:")
         for(player in mc.world.playerEntities) {
             if(FriendManager.isFriendly(player.name)) {
-                displayText.add(player.name + "\n", ColorHolder(0,255,0))
-            }
-            else{
-                displayText.add(player.name + "\n", ColorHolder(255,0,0))
+                displayText.add(player.name , ColorHolder(0,255,0))
+                displayText.currentLine++
 
             }
         }
