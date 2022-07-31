@@ -1,13 +1,13 @@
 package com.lambda
 
 import com.lambda.client.plugin.api.Plugin
-import com.lambda.huds.ExampleLabelHud
+import com.lambda.huds.GoonSquadHud
 
-internal object ExamplePlugin : Plugin() {
+internal object Olympia : Plugin() {
 
     override fun onLoad() {
         // Load any modules, commands, or HUD elements here
-        hudElements.add(ExampleLabelHud)
+        hudElements.add(GoonSquadHud)
     }
 
     override fun onUnload() {

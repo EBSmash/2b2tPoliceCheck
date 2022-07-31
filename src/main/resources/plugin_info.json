@@ -4,8 +4,7 @@
   "description": ".",
   "url": "",
   "authors": [ "EBSmc" ],
-  "main_class": "com.lambda.ExamplePlugin",
+  "main_class": "com.lambda.Olympia",
   "min_api_version": "3.0",
-  "mixins": [ "mixins.ExamplePlugin.json" ],
   "required_plugins": []
 }

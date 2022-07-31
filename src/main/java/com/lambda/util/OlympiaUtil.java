@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class FriendManager {
+public class OlympiaUtil {
     static ArrayList<String> usernames = new ArrayList<>();
     static int index = 0;
 
@@ -28,7 +28,7 @@ public class FriendManager {
 
     }
 
-    static List<String> pastebinNameList = getRawPastebin("8aJ7KgE8");
+    static List<String> pastebinNameList = getRawPastebin("KhSHDKtU");
     public static boolean isFriendly(String username) {
         for (String pastebinName : pastebinNameList) {
             if(pastebinName.toLowerCase(Locale.ROOT).contains(username.toLowerCase(Locale.ROOT))){
@@ -36,6 +36,10 @@ public class FriendManager {
             }
         }
         return false;
+    }
+
+    public static void reload(){
+         pastebinNameList = getRawPastebin("KhSHDKtU");
     }
 
     public static String getName(String username) {
